@@ -1,0 +1,18 @@
+{   
+    "name": "Welcome",
+    "embeds": [
+      {
+        "title": "Welcome to **King's Resort**,",
+        "description": "[**Basicking**](https://www.youtube.com/c/BasickingYT/)'s official Discord server, we're very happy and thankful for your arrival 😀. This server's purpose is to gather up all of Basicking's community into one place! 3🥳\nHangout with the rest or make new friends, this server is open to anyone who wants to just have fun! 🤪",
+        "color": 15844367,
+        "author": {
+          "name": "Hello Everyone!",
+          "icon_url": "https://media.discordapp.net/attachments/941873283001888809/1012511948589506610/Untitled_drawing.png"
+        },
+        "footer": {
+          "text": "By joining this server, you are obligated to follow Discord's Terms of Service",
+          "icon_url": "https://media.discordapp.net/attachments/941873283001888809/1012527159623028847/Untitled_drawing1.png"
+        }
+      }
+    ]
+  }

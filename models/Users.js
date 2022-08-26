@@ -1,5 +1,3 @@
-
-
 const UserSchema = {
   _id: { type: String },
   userId: {type: String},

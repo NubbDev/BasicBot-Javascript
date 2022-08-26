@@ -1,7 +1,7 @@
 const fetch = require('node-superfetch')
 const guildId = '986976198108254218'
 const client = require('../index.js')
-const abbrNum = require('../abbrNum.js')
+const abbrNum = require('../data/functions/abbrNum.js')
 
 client.on('ready', async () => {
     const vc = '996460777131212820'

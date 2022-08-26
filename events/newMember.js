@@ -22,37 +22,25 @@ client.on('guildMemberAdd', async (member) => {
     const query = {_id: member.id};
     const result = await db.findOne(query);
 
-    console.log(result)
-
-
-
-    if (result === null || !result) {
-        const obj = {...Users,
-                    _id: member.id,
-                    userId: member.id,
-                }
-        db.insertOne(obj, (err, res) => {
-        if (err) throw err;
-        console.log("New User Added")
-        })
-    } else if (result._id === member.id) {
-        console.log("User already stored in database")
-        return;
-    } else {
-        console.log("Error searching for user data")
-        return;
+    await result
+    try{
+        if (result === null || !result) {
+            const obj = {...Users,
+                        _id: member.id,
+                        userId: member.id,
+                    }
+            db.insertOne(obj, (err, res) => {
+            if (err) throw err;
+            console.log("New User Added")
+            })
+        } else if (result._id === member.id) {
+            console.log("User already stored in database")
+            return;
+        } else {
+            console.log("Error searching for user data")
+            return;
+        }
+    } catch(error) {
+        console.log(error)
     }
-
-    // if (dbo.find(query) === `${member.id}`) {
-    //     
-    // } else {
-    //     
-
-    
-    // const newUser = new levels({
-    //     userID: member.id,
-    //     guildID: process.env.GUILDID
-    // });
-      
-    // await newUser.save().catch(e => console.log(`Failed to create user: ${e}`))
 })

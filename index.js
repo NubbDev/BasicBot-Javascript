@@ -1,9 +1,8 @@
 const { Client, GatewayIntentBits, Collection, Partials } = require("discord.js");
-const Levels = require("discord-xp");
 const dotenv = require('dotenv');
 const {DisTube} = require('distube')
 const {SpotifyPlugin} = require('@distube/spotify')
-const MongoClient = require('mongodb').MongoClient
+const MongoClient = require('mongodb').MongoClient 
 dotenv.config();
 
 
@@ -11,7 +10,7 @@ const client = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildBans, GatewayIntentBits.GuildEmojisAndStickers, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildVoiceStates, GatewayIntentBits.GuildWebhooks, GatewayIntentBits.GuildPresences, GatewayIntentBits.GuildMessageTyping, GatewayIntentBits.MessageContent],
     partials: [Partials.GuildMember, Partials.Channel, Partials.ThreadMember, Partials.GuildScheduledEvent, Partials.Message, Partials.User]
 });
-client.distube = new DisTube(client, {
+client.music = new DisTube(client, {
     emitNewSongOnly: true,
     emitAddSongWhenCreatingQueue: false,
     plugins: [new SpotifyPlugin]

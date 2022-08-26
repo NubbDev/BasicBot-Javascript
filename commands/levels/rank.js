@@ -11,15 +11,19 @@ module.exports = {
         ],
 
 	run: async (interaction) => {
-                const user = interaction.options.getUser('user') ?? interaction.user
+                let user = interaction.options.getUser('user') ?? interaction.user
                 const db = client.database.db("KingsData").collection("Users")
                 const query = {_id: user.id};     
                 const result = await db.findOne(query);
-                
+                const list = await db.find().sort({level: -1, xp: -1}).toArray()
+
+                const pos = await list.findIndex(i => i._id === user.id) + 1
+
                 if (!result) {interaction.reply({content: `${user} has no levels or xp`, ephemeral: true})}
                 else {
                         const {level, xp} = await result
-                        interaction.reply(`Hey ${user}! You have ${level} level(s)!${xp} xp!`)
+                        interaction.reply(`Hey ${user.tag}! You have ${level} level(s)!${xp} xp! Position ${pos}/${list.length}`)
                 }
 	}
 };
+
