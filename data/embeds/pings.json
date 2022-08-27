@@ -34,14 +34,14 @@
                         {
                             "id": 1661532562620,
                             "label": "Giveaway Notifications",
-                            "value": "1000646675989266532",
+                            "value": "996248853990875206",
                             "description": "Receive giveaway pings for free items!",
                             "emoji": "🎁"
                         },
                         {
                             "id": 1661532562621,
                             "label": "Social Notifications",
-                            "value": "996248853990875206",
+                            "value": "1000646675989266532",
                             "description": "Get alerted to twitter and livestream notifications",
                             "emoji": "🐦"
                         }

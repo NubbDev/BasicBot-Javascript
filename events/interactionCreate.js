@@ -6,15 +6,14 @@ const config = require('../config.json');
 const cooldown = new Collection();
 
 client.on('interactionCreate', async interaction => {
-	const slashCommand = client.commands.get(interaction.commandName);
+	if (interaction.isCommand()) {
+		const slashCommand = client.commands.get(interaction.commandName);
 		if (interaction.type == 4) {
 			if(slashCommand.autocomplete) {
 				const choices = [];
 				await slashCommand.autocomplete(interaction, choices)
 			}
 		}
-		if (!interaction.type == 2) return;
-
 		try {
 			if(slashCommand.cooldown) {
 				if(cooldown.has(`slash-${slashCommand.name}${interaction.user.id}`)) return interaction.reply({ content: config.messages["COOLDOWN_MESSAGE"].replace('<duration>', ms(cooldown.get(`slash-${slashCommand.name}${interaction.user.id}`) - Date.now(), {long : true}) ) })
@@ -55,4 +54,34 @@ client.on('interactionCreate', async interaction => {
 				console.log(error);
 				await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
 		}
+	}
+	if (interaction.isButton()) {
+		const button = client.buttons.get(interaction.customId);
+		try {
+			await button.run(interaction);
+		} catch (error) {
+			console.log(error);
+			await interaction.reply({ content: 'There was an error while executing this button!', ephemeral: true });
+		}
+	}
+	if (interaction.isSelectMenu()) {
+		const { customId, member, values} = interaction;
+		if (interaction.customId.toLowerCase() === ('pingmenu').toLowerCase()) {
+			try {
+				const component = interaction.component
+				const removed = component.options.filter(option => !values.includes(option.value));
+				for (const id of removed) {
+					member.roles.remove(id.value);
+				}
+				for (const id of values) {
+					member.roles.add(id);
+				}
+				interaction.reply({ content: 'Roles updated!', ephemeral: true });
+			} catch (error) {
+				console.log(error);
+				await interaction.reply({ content: 'There was an error while executing this select menu!', ephemeral: true });
+			}
+		}
+	}
+	
 })

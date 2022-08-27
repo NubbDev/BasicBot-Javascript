@@ -23,7 +23,6 @@ client.aliases = new Collection();
 client.voiceGenerator = new Collection();
 
 
-
 module.exports = client;
 
 // All Events and Commands Are Loading
