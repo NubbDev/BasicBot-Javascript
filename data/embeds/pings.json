@@ -1,0 +1,55 @@
+{
+    "name": "pings",
+    "embeds": [
+        {
+            "description": "Making sure we will not disturb your day, we created ping roles so only people who want to receive the notification will be notified! Reacting to the following roles will receive those pings!",
+            "title": "**Notification Role**",
+            "color": 15844367
+        }
+    ],
+    "components": [
+        {
+            "type": 1,
+            "components": [
+                {
+                    "type": 3,
+                    "custom_id": "pingmenu",
+                    "min_values": 0,
+                    "max_values": 4,
+                    "options": [
+                        {
+                            "id": 1661532562618,
+                            "label": "Update Notifations",
+                            "value": "996248807916445739",
+                            "description": "Receive server update pings!",
+                            "emoji": "📆"
+                        },
+                        {
+                            "id": 1661532562619,
+                            "label": "Event Ping",
+                            "value": "996248566362284042",
+                            "description": "Receive event notifications for server fun times!",
+                            "emoji": "🎉"
+                        },
+                        {
+                            "id": 1661532562620,
+                            "label": "Giveaway Notifications",
+                            "value": "1000646675989266532",
+                            "description": "Receive giveaway pings for free items!",
+                            "emoji": "🎁"
+                        },
+                        {
+                            "id": 1661532562621,
+                            "label": "Social Notifications",
+                            "value": "996248853990875206",
+                            "description": "Get alerted to twitter and livestream notifications",
+                            "emoji": "🐦"
+                        }
+                    ],
+                    "placeholder": "Select your notification role..."
+                }
+            ]
+        }
+    ],
+    "content": ""
+}

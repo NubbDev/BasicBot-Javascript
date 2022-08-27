@@ -17,7 +17,6 @@ client.music = new DisTube(client, {
 })
 
 // Levels.setURL(process.env.MONGO_URI);
-
 client.database = new MongoClient(process.env.MONGO_URL);
 client.commands = new Collection();
 client.aliases = new Collection();

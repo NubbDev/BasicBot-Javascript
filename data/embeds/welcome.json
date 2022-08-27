@@ -1,9 +1,9 @@
-{   
-    "name": "Welcome",
+{
+    "name": "welcome",
     "embeds": [
       {
         "title": "Welcome to **King's Resort**,",
-        "description": "[**Basicking**](https://www.youtube.com/c/BasickingYT/)'s official Discord server, we're very happy and thankful for your arrival 😀. This server's purpose is to gather up all of Basicking's community into one place! 3🥳\nHangout with the rest or make new friends, this server is open to anyone who wants to just have fun! 🤪",
+        "description": "[**Basicking**](https://www.youtube.com/c/BasickingYT/)'s official Discord server, we're very happy and thankful for your arrival 😀. This server's purpose is to gather up all of Basicking's community into one place! 🥳\nHangout with the rest or make new friends, this server is open to anyone who wants to just have fun! 🤪 \nYou are very welcome in the great and welcoming community, hope you enjoy your stay! 👍",
         "color": 15844367,
         "author": {
           "name": "Hello Everyone!",
@@ -13,6 +13,79 @@
           "text": "By joining this server, you are obligated to follow Discord's Terms of Service",
           "icon_url": "https://media.discordapp.net/attachments/941873283001888809/1012527159623028847/Untitled_drawing1.png"
         }
+      },
+      {
+        "title": "**Server Rules 📜**",
+        "description": "** **",
+        "color": 15798031,
+        "fields": [
+          {
+            "name": ":handshake: **1. Be respectful**",
+            "value": "You must respect all users, regardless of your liking towards them. Treat others the way you want to be treated.\n** **"
+          },
+          {
+            "name": ":face_with_symbols_over_mouth:  **2. No Inappropriate Language**",
+            "value": "The use of profanity should be kept to a minimum. However, any derogatory language towards any user is prohibited.\n** **"
+          },
+          {
+            "name": ":shushing_face: **3. No spamming**",
+            "value": "Don't send a lot of small messages right after each other. Do not disrupt chat by spamming.\n** **"
+          },
+          {
+            "name": ":imp: **4. No pornographic/adult/other NSFW material**",
+            "value": "This is a community server and not meant to share this kind of material.\n** **"
+          },
+          {
+            "name": ":busts_in_silhouette: **5. No DM advertisements**",
+            "value": "We do not tolerate any kind of dm advertisements, whether it be for other communities, streams, or discords. You can post your content in the self promo channel.\n** **"
+          },
+          {
+            "name": ":disguised_face: **6. No offensive names, profile pictures, and statuses**",
+            "value": "You will be asked to change your name, picture, or status if the staff deems them inappropriate.\n** **"
+          },
+          {
+            "name": ":robot: **7. Server Raiding**",
+            "value": "Raiding or mentions of raiding are not allowed.\n** **"
+          },
+          {
+            "name": ":detective: **8. Direct & Indirect Threats**",
+            "value": "Threats to other users of DDoS, Death, DoX, abuse, and other malicious threats are absolutely prohibited and disallowed.\n** **"
+          },
+          {
+            "name": ":sunglasses: **9. Follow the Discord Community Guidelines and Terms**",
+            "value": "You can find them here: [Discord Community Guidelines](https://discordapp.com/guidelines)**,** [Discord Terms of Service](https://discordapp.com/terms)\n** **"
+          },
+          {
+            "name": ":unamused: **10. Do not join voice chat channels if someone doesn’t want you in it**",
+            "value": "If you see that they have a free spot it is alright to join and ask whether they have an open spot, but leave if your presence is not \nwanted by whoever was there first.\n** **"
+          },
+          {
+            "name": "**The Admins and Mods will Mute/Kick/Ban per discretion.**",
+            "value": "If you feel mistreated dm an Admin/Moderator and we will resolve the issue. If you don't understand something, feel free to ask!"
+          }
+        ],
+        "footer": {
+          "text": "Your presence in this server implies accepting these rules, including all further changes. These changes might be done at any time without notice, it is your responsibility to check for them."
+        }
+      },
+      {
+        "title": "**Stay Connected 🔗**",
+        "description": "** **\n**Youtube Channel: **[youtube.com/basickingyt](https://www.youtube.com/c/BasickingYT) <:youtube:1012641125632323624>\n\n**Second Channel: **[youtube.com/Basicking²](https://www.youtube.com/channel/UChSubjDL6iiqL-5hQ0BFw9g) <:youtube:1012641125632323624>v2\n\n**Twitter Account: **[twitter.com/imBasicKing](https://twitter.com/imBasicKing) <:twitter:1012641123891695626> \n\n**Twitch Channel: **[twitch.tv/sirbasicking](https://www.twitch.tv/sirbasicking) <:twitch:1012641121412853810>\n\n**Instagram Account: **[ig.com/imbasicking](https://www.instagram.com/imbasicking/) <:instagram:1012641119412170752>",
+        "color": 1019633
       }
-    ]
+    ],
+    "components": [
+        {
+            "type": 1,
+            "components": [
+                {
+                    "type": 2,
+                    "style": 5,
+                    "url": "https://discord.com/channels/986976198108254218/996218493672366140",
+                    "label": "Server Information"
+                }
+            ]
+        }
+    ],
+    "attachments": []
   }
