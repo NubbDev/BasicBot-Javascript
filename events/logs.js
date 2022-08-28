@@ -9,27 +9,22 @@ const deleteEmbed = require('../data/template/message-delete.js');
 const web = new WebhookClient({id: '1013179498558148608', token: process.env.LOGSID});
 
 client.on('messageDelete', async (message) => {
-    console.log(`A message by ${message.author.tag} was deleted, but we don't know by who yet.`)
-    if (message.partial) {
+    const text = await message;
+
+    if (text.author.bot) return;
+
+    if (text.channel.type !== 0) return;
+    if (text.channel.type === 0) {
+        const time = Math.round(text.createdTimestamp / 1000);
+        const embed = await deleteEmbed(text);
         try {
-            await message.fetch();
-        } catch (err) {
-            console.log(err);
-        }
-    }
-    if (message.author.bot) return;
-    if (message.channel.type === 'dm') return;
-    if (message.channel.type === 'news') return;
-    if (message.channel.type === 'store') return;
-    
-    if (message.channel.type === 'text') {
-        const {embed} = deleteEmbed(message);
-        web.send(
-            {   
-                content: `Message Deleted`,
-                username: 'Message Deleted',
+            await web.send({
+                username: "King's Resort Logs",
+                avatarURL: "https://www.pngall.com/wp-content/uploads/4/Settings-PNG-Images.png",
                 embeds: [embed]
-            }
-        );
+            });
+        } catch (error) {
+            console.log(error);
+        }
     }
 })

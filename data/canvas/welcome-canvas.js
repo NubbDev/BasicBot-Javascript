@@ -19,9 +19,6 @@ const welcome = async(member, text, list) => {
     const canvas = Canvas.createCanvas(975, 410);
     const ctx = canvas.getContext('2d');
     const user = await member;
-    Canvas.GlobalFonts.registerFromPath(path.join(__dirname, '..', 'source-sans-pro-semibold.ttf'), 'Source-Sans-Pro');
-    
-    console.log(Canvas.GlobalFonts.families)
 
     const background = await Canvas.loadImage('./data/image/welcome.png');
     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
