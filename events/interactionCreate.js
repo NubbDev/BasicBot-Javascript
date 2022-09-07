@@ -2,6 +2,7 @@ const { EmbedBuilder, Collection, PermissionsBitField } = require('discord.js');
 const ms = require('ms');
 const client = require('../index.js');
 const config = require('../config.json');
+const {replySuccess, replyError} = require('../data/template/success.js');
 
 const cooldown = new Collection();
 
@@ -52,16 +53,25 @@ client.on('interactionCreate', async interaction => {
 			}
 		} catch (error) {
 				console.log(error);
-				await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+				replyError(interaction, 'There was an error while executing this command!');
 		}
 	}
 	if (interaction.isButton()) {
-		const button = client.buttons.get(interaction.customId);
 		try {
-			await button.run(interaction);
+			const {customId} = interaction;
+            const role = interaction.guild.roles.cache.get(customId);
+            if (!role) return;
+            if (interaction.member.roles.cache.has(role.id)) {
+                await interaction.member.roles.remove(role);
+                await replySuccess(interaction, `Removed role ${role}`);
+            }
+            else { 
+                await interaction.member.roles.add(role);
+                await replySuccess(interaction, `Added role ${role}`);
+            }
 		} catch (error) {
 			console.log(error);
-			await interaction.reply({ content: 'There was an error while executing this button!', ephemeral: true });
+			await replyError(interaction, 'There was an error while executing this button!');
 		}
 	}
 	if (interaction.isSelectMenu()) {
@@ -76,10 +86,11 @@ client.on('interactionCreate', async interaction => {
 				for (const id of values) {
 					member.roles.add(id);
 				}
-				interaction.reply({ content: 'Roles updated!', ephemeral: true });
+				const replyMessage = `Successfully updated your roles!\n**Added:** ${values.map(id => `<@&${id}>`).join(', ')}\n**Removed:** ${removed.map(id => `<@&${id.value}>`).join(', ')}`;
+			await replySuccess(interaction, replyMessage);
 			} catch (error) {
 				console.log(error);
-				await interaction.reply({ content: 'There was an error while executing this select menu!', ephemeral: true });
+				await replyError(interaction, 'There was an error while executing this select menu!');
 			}
 		}
 	}

@@ -70,8 +70,35 @@
       },
       {
         "title": "**Stay Connected 🔗**",
-        "description": "** **\n**Youtube Channel: **[youtube.com/basickingyt](https://www.youtube.com/c/BasickingYT) <:youtube:1012641125632323624>\n\n**Second Channel: **[youtube.com/Basicking²](https://www.youtube.com/channel/UChSubjDL6iiqL-5hQ0BFw9g) <:youtube:1012641125632323624>v2\n\n**Twitter Account: **[twitter.com/imBasicKing](https://twitter.com/imBasicKing) <:twitter:1012641123891695626> \n\n**Twitch Channel: **[twitch.tv/sirbasicking](https://www.twitch.tv/sirbasicking) <:twitch:1012641121412853810>\n\n**Instagram Account: **[ig.com/imbasicking](https://www.instagram.com/imbasicking/) <:instagram:1012641119412170752>",
-        "color": 1019633
+        "description": "** **",
+        "color": 1019633,
+        "fields": [
+          {
+            "name": "<:youtube:1012641125632323624> **Youtube Channel: **",
+            "value": "[youtube.com/basickingyt](https://www.youtube.com/c/BasickingYT)",
+            "inline": true
+          },
+          {
+            "name": "<:youtube:1012641125632323624> **Second Channel: **",
+            "value": "[youtube.com/Basicking²](https://www.youtube.com/channel/UChSubjDL6iiqL-5hQ0BFw9g)",
+            "inline": true
+          },
+          {
+            "name": "<:twitter:1012641123891695626> **Twitter Account: **",
+            "value": "[twitter.com/imBasicKing](https://twitter.com/imBasicKing)",
+            "inline": true
+          },
+          {
+            "name": "<:twitch:1012641121412853810> **Twitch Channel: **",
+            "value": "[twitch.tv/sirbasicking](https://www.twitch.tv/sirbasicking)",
+            "inline": true
+          },
+          {
+            "name": "<:instagram:1012641119412170752> **Instagram Account: **",
+            "value": "[instagram.com/imbasicking](https://www.instagram.com/imbasicking/)",
+            "inline": true
+          }
+        ]
       }
     ],
     "components": [

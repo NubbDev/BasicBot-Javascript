@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const {DisTube} = require('distube')
 const {SpotifyPlugin} = require('@distube/spotify')
 const MongoClient = require('mongodb').MongoClient 
+const Notifier = require("@daangamesdg/youtube-notifications");
 dotenv.config();
 
 
@@ -16,11 +17,13 @@ client.music = new DisTube(client, {
     plugins: [new SpotifyPlugin]
 })
 
-// Levels.setURL(process.env.MONGO_URI);
 client.database = new MongoClient(process.env.MONGO_URL);
 client.commands = new Collection();
 client.aliases = new Collection();
 client.voiceGenerator = new Collection();
+// client.youtube = new Notifier({
+    
+// })
 
 
 module.exports = client;

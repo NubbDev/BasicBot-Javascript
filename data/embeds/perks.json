@@ -1,0 +1,37 @@
+{
+    "name": "perks",
+    "embeds": [{
+            "fields": [
+                {
+                    "name": "VIP Chat 💬",
+                    "value": "**-** Access to <#996521005889630319> Chat Channel\n** **",
+                    "inline": true
+                },
+                {
+                    "name": "VIP VoiceChat 🔊",
+                    "value": "**-** Access to <#996521221669797958> Voice Channel\n** **",
+                    "inline": true
+                },
+                {
+                    "name": "Special Cosmetic Rank ✨",
+                    "value": "**-** Receive a special rank on the minecraft server, nothing to special. ||[Bragging rights](https://www.merriam-webster.com/dictionary/bragging%20rights)||\n** **",
+                    "inline": false
+                },
+                {
+                    "name": "Custom Reactions ‼️",
+                    "value": "**-** Custom Reaction to your name! ||Dm <@401844809385508903>||\n** **",
+                    "inline": true
+                },
+                {
+                    "name": "Image Perms 🖼️",
+                    "value": "**-** Image & Gif Permission in <#996165196794056865>\n** **",
+                    "inline": true
+                }
+            ],
+            "title": "Channel Member & Booster Perks",
+            "description": "Here are the perks you get for being a Basicking youtube channel member or discord server booster! ||or even both 😏||",
+            "color": 15295999
+        }],
+    "components": [],
+    "content": ""
+}
