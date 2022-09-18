@@ -2,7 +2,7 @@ const client = require('../index.js');
 
 client.on('guildMemberAdd', async (member) => {
     const db = await client.database.db("KingsData").collection("Punishments") 
-    const results = await db.findOne({userId: member.id, type: 'mute'});
+    const results = await db.findOne({_id: member.id, type: 'mute'});
     const guild = await client.guilds.fetch("986976198108254218")
 
     if (results) {

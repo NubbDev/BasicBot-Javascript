@@ -10,7 +10,6 @@ const abbrNum = require('../data/functions/abbrNum.js')
 client.on('guildMemberAdd', async (member) => {
 
     const channelId = '996891767188230194'
-    const memberRole = '988684522839212113'
     const guild = client.guilds.cache.get('986976198108254218')
     const members = abbrNum(guild.members.cache.filter(member => !member.user.bot).size, 2)
     
@@ -22,7 +21,6 @@ client.on('guildMemberAdd', async (member) => {
     const channel = (client.channels.cache.get(channelId));
     const {attachment} = await welcome(member, text2[i], members)
     channel.send({content: text[i], files: [attachment]})
-    member.roles.add(memberRole)
 
     const db = client.database.db("KingsData").collection("Users")
     const query = {_id: member.id};

@@ -84,13 +84,12 @@ client.on('messageCreate', async message => {
         return ans;
     }
     let {xp, level} = await result
-    
-    
+    const guildMember = message.guild.members.cache.get(member.id)
+    giveLevel(level, message, guildMember);
     const needed = getNeededXP(level)
     if (xp >= needed) {
         level++;
         await db.updateOne(query, {$inc: {xp: -needed, level: 1}, });
-        giveLevel(level, message, member);
         message.reply(`GG <@${messageAuthor.id}>, you're now level ${level}`);
     }
 })
